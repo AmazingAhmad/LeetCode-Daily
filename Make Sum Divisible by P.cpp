@@ -20,10 +20,7 @@ public:
             preSum = (preSum + nums[i]) % p;
             int need = (preSum - tar + p) % p;
             if(um.find(need) != um.end())
-            {
-                cout << i << " " << need << " " << um[need] << endl;
                 res = min(res, i - um[need]);
-            }
             um[preSum] = i;
         }
         if(res == n)
